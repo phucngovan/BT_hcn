@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Rectangle=function (x, y, width,hight) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.hight = hight;
+    }
+
+    function createRectangle(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var rectangle= new Rectangle(500, 500, 100,200);
+        ctx.fillStyle="rgba(0,200,0,1)";
+        ctx.fillRect(rectangle.x,rectangle.y,rectangle.width,rectangle.hight);
+    }
+    createRectangle();
+    let Rectangle1=function ( width,hight) {
+        this.width = width;
+        this.hight = hight;
+
+    this.getwidth = function() {
+        return this.width;
+    }
+    this.getHight = function() {
+        return this.hight;
+    }
+    this.getArea = function() {
+        return width * hight;
+    }
+    this.getS= function () {
+        return (width + hight)*2 ;
+    }
+
+
+    }
+    let rectangle1 =new Rectangle1(300,400);
+    let area=rectangle1.getArea();
+    let S=rectangle1.getS();
+    alert("chu vi :"+ area);
+    alert("dien tich :" + S);
+
+</script>
+</body>
+</html>
